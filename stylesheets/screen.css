@@ -107,6 +107,36 @@ nav {
   line-height: 70px;
   z-index: 5;
   color: #fff;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+nav .title {
+  font-size: 32px;
+  text-indent: 2px;
+  font-family: "Dancing Script", cursive;
+  font-style: italic;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  position: absolute;
+  color: #ff9900;
+  box-sizing: border-box;
+  top: 10px;
+  left: 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 0;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 nav .menu {
   position: absolute;
@@ -114,10 +144,34 @@ nav .menu {
   top: 0;
   right: 10px;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 nav .menu li {
   display: inline-block;
   padding: 0 10px;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+nav.solid {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(70, 70, 70, 0.4);
+}
+nav.solid .title {
+  opacity: 1;
+  color: #ff9900;
+  -moz-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  -webkit-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+  border: 1px #ff9900 solid;
+}
+nav.solid li {
+  color: #333;
+}
+nav.solid li:hover {
+  border-bottom: 3px #ff9900 solid;
 }
 
 header {
@@ -175,7 +229,7 @@ section h1 {
   font-size: 2.2rem;
   line-height: 6rem;
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 90px;
 }
 section ul {
   text-align: center;

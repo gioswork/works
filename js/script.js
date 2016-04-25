@@ -2,26 +2,39 @@
 var wHeight = $(window).height();
 var wWidth = $(window).width();
 
-// $('header').css('height', wHeight);
-// if ( (wHeight / wWidth) < (9/16) ) {
-//     $('header video').css('width','100%');
-// } else {
-//     $('header video').css('height','100%')
-// };
 
-// $( window ).resize(function() {
-//     $('header video').attr('style','')
-//     $('header').css('height', $(window).height());
-//     if ( ($(window).height() / $(window).width()) < (9/16) ) {
-//       $('header video').css('width','100%')
-//     } else {
-//       $('header video').css('height','100%')
-//     };
-// });
+// video background
 
 $(document).ready(function() {
     $('.player').mb_YTPlayer();
     $('.form-cont').load('form.html');
+});
+
+
+// nav
+
+function section1(){$('html,body').animate( { scrollTop: $('.section-01').offset().top}, 400)};
+function section2(){$('html,body').animate( { scrollTop: $('.section-02').offset().top}, 400)};
+function section3(){$('html,body').animate( { scrollTop: $('.section-03').offset().top}, 400)};
+function gotop(){$('html,body').animate( { scrollTop: $('html,body').offset().top}, 100)};
+
+
+// scroll
+
+$(document).ready(function(){
+	var wh = $(window).height();
+	$(window).scroll(function(){
+		var y = $(window).scrollTop();
+		if( y >= wh ){
+			$('nav').addClass('solid');
+		} else {
+			$('nav').removeClass('solid');
+		}
+	});
+})
+
+$( window ).resize(function() {
+	mainBG();
 });
 
 $('.works li').click(function(){
