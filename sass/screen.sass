@@ -27,6 +27,12 @@ body
 			z-index: 3
 			background-color: rgba(50,50,50,0.6)
 			content: ''
+		nav
+			
+			background-color: transparent
+			box-shadow: 0 0 0 0 #fff
+			li
+				color: #fff
 	.gif-bg
 		position: fixed
 		width: 100%
@@ -256,7 +262,7 @@ section
 		line-height: 2rem
 		text-align: left
 		padding-bottom: 60px
-		@media screen and (max-width: 414px)
+		ㄒ
 			width: 80%
 		.des,
 		.form-cont
@@ -349,6 +355,10 @@ section
 	opacity: 0
 	+transition(0.2s ease-out)
 	+transform(translateY(30%) scale(1))
+	@media screen and (max-width: 414px)
+		left: 5px
+		width: calc(100% - 10px)
+
 	&.show
 		z-index: 100
 		opacity: 1

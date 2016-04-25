@@ -87,6 +87,13 @@ body.blur:after {
   background-color: rgba(50, 50, 50, 0.6);
   content: "";
 }
+body.blur nav {
+  background-color: transparent;
+  box-shadow: 0 0 0 0 #fff;
+}
+body.blur nav li {
+  color: #fff;
+}
 body .gif-bg {
   position: fixed;
   width: 100%;
@@ -392,10 +399,8 @@ section .contact {
   text-align: left;
   padding-bottom: 60px;
 }
-@media screen and (max-width: 414px) {
-  section .contact {
-    width: 80%;
-  }
+section .contact ㄒ {
+  width: 80%;
 }
 section .contact .des,
 section .contact .form-cont {
@@ -523,6 +528,12 @@ section .contact .form-cont.show-ok #complete {
   -ms-transform: translateY(30%) scale(1);
   -webkit-transform: translateY(30%) scale(1);
   transform: translateY(30%) scale(1);
+}
+@media screen and (max-width: 414px) {
+  .detail {
+    left: 5px;
+    width: calc(100% - 10px);
+  }
 }
 .detail.show {
   z-index: 100;
