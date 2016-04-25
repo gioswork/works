@@ -218,6 +218,10 @@ header h1 {
   -webkit-transform: rotate(-13deg);
   transform: rotate(-13deg);
 }
+header.mobile-gif {
+  background: url(../img/bg-video.gif) center no-repeat;
+  background-size: cover;
+}
 
 section {
   width: 100%;
@@ -239,6 +243,16 @@ section ul li {
   display: inline-block;
   margin: 15px auto;
 }
+@media screen and (max-width: 768px) {
+  section ul li {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 414px) {
+  section ul li {
+    width: 90%;
+  }
+}
 section ul li .cover {
   width: 350px;
   margin: auto;
@@ -253,6 +267,18 @@ section ul li .cover {
 }
 section ul li .cover:hover {
   box-shadow: 0 0 0 5px #fff inset;
+}
+@media screen and (max-width: 1024px) {
+  section ul li .cover {
+    width: 300px;
+    height: 171px;
+  }
+}
+@media screen and (max-width: 414px) {
+  section ul li .cover {
+    width: 350px;
+    height: 200px;
+  }
 }
 section ul li[project=c2p] .cover {
   background-image: url(../img/cover-c2p.jpg);
@@ -302,6 +328,11 @@ section .about {
   font-size: 1rem;
   line-height: 2rem;
 }
+@media screen and (max-width: 414px) {
+  section .about {
+    width: 80%;
+  }
+}
 section .about b {
   font-weight: bold;
   border-bottom: 2px #ff9900 solid;
@@ -319,6 +350,15 @@ section .about .lang {
 }
 section .about .lang.zh {
   margin-left: 5%;
+}
+@media screen and (max-width: 414px) {
+  section .about .lang {
+    width: 100%;
+  }
+  section .about .lang.zh {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 section .about hr {
   margin: 1.5rem 0;
@@ -352,6 +392,11 @@ section .contact {
   text-align: left;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 414px) {
+  section .contact {
+    width: 80%;
+  }
+}
 section .contact .des,
 section .contact .form-cont {
   display: inline-block;
@@ -365,10 +410,20 @@ section .contact .des {
 section .contact .des .tc {
   padding-top: 15px;
 }
+@media screen and (max-width: 414px) {
+  section .contact .des {
+    width: 100%;
+  }
+}
 section .contact .form-cont {
   text-align: center;
   width: 60%;
   position: relative;
+}
+@media screen and (max-width: 414px) {
+  section .contact .form-cont {
+    width: 100%;
+  }
 }
 section .contact .form-cont li {
   width: 100%;

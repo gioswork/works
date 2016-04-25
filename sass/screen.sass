@@ -87,7 +87,6 @@ nav
 			&:hover
 				border-bottom: 3px #ff9900 solid
 				
-
 header
 	position: relative
 	width: 100%
@@ -120,6 +119,9 @@ header
 		box-sizing: border-box
 		+border-radius(50%)
 		+transform(rotate(-13deg))
+	&.mobile-gif
+		background: url(../img/bg-video.gif) center no-repeat
+		background-size: cover
 
 
 section
@@ -138,6 +140,10 @@ section
 			width: 30%
 			display: inline-block
 			margin: 15px auto
+			@media screen and (max-width: 768px)
+				width: 48%
+			@media screen and (max-width: 414px)
+				width: 90%
 			.cover
 				width: 350px
 				margin: auto
@@ -148,6 +154,12 @@ section
 				+transition(0.3s)
 				&:hover
 					box-shadow: 0 0 0 5px #fff inset
+				@media screen and (max-width: 1024px)
+					width: 300px
+					height: 171px
+				@media screen and (max-width: 414px)
+					width: 350px
+					height: 200px	
 				
 			&[project=c2p]
 				.cover
@@ -196,6 +208,8 @@ section
 		margin: auto
 		font-size: 1rem
 		line-height: 2rem
+		@media screen and (max-width: 414px)
+			width: 80%
 		b
 			font-weight: bold
 			border-bottom: 2px #ff9900 solid
@@ -210,6 +224,11 @@ section
 			vertical-align: top
 			&.zh
 				margin-left: 5%
+			@media screen and (max-width: 414px)
+				width: 100%
+				&.zh
+					margin-left: 0
+					margin-top: 10px
 		hr
 			margin: 1.5rem 0
 			opacity: 0
@@ -237,6 +256,8 @@ section
 		line-height: 2rem
 		text-align: left
 		padding-bottom: 60px
+		@media screen and (max-width: 414px)
+			width: 80%
 		.des,
 		.form-cont
 			display: inline-block
@@ -247,10 +268,14 @@ section
 			font-size: 1.2rem	
 			.tc
 				padding-top: 15px
+			@media screen and (max-width: 414px)
+				width: 100%
 		.form-cont
 			text-align: center
 			width: 60%
 			position: relative
+			@media screen and (max-width: 414px)
+				width: 100%
 			li
 				width: 100%
 				display: block

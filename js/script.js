@@ -49,3 +49,12 @@ $('.detail .close').click(function(){
 	$('.detail iframe').attr('src','');
   $('body').removeClass('blur');
 })
+
+
+// mobile
+
+var device = navigator.userAgent.toLowerCase();
+var mobile = device.match(/(iphone|ipod|ipad|android)/);
+if (mobile) {
+	$('header').addClass('mobile-gif')
+}
