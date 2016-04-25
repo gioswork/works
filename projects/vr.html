@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project</title>
+	<link rel="stylesheet" href="../stylesheets/screen.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<script src="../js/pdfobject.min.js"></script>
+	<style>
+	.pdfobject-container {
+		width: 630px;
+		height: 885px;
+		margin: 20px auto;
+		box-shadow: 0px 2px 3px rgba(0,0,0,0.5)
+	}
+	</style>
+</head>
+<body>
+<div class="project">
+	<div class="inner">
+	<h1>VR World</h1>
+	
+	<h2>Logo</h2>
+	<div class="pic">
+		<img src="../img/works/VR/VR-logo.jpg">
+	</div>
+
+	<h2>Busniess Card</h2>
+	<div class="pic">
+		<img src="../img/works/VR/VR-biz.jpg">
+	</div>
+
+	<h2>Online Magzine</h2>
+
+	<div id="issue1" class="pdfobject-container"></div>
+
+	<div id="issue2" class="pdfobject-container"></div>
+
+
+	<p>
+		
+	</p>
+	</div>
+</div>
+<script>
+	PDFObject.embed("../img/works/VR/VR-issue01.pdf", "#issue1");
+	PDFObject.embed("../img/works/VR/VR-issue02.pdf", "#issue2");
+</script>
+</body>
+</html>

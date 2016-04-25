@@ -1,0 +1,539 @@
+@import compass/reset
+@import compass/css3
+@import mixin
+
+::selection
+	background: #ff9900
+	color #fff
+
+body
+	margin: 0
+	padding: 0
+	background-color: #f5f5f5
+	font-family: 'Roboto', sans-serif, Heiti TC
+	&.blur
+		overflow: hidden
+		header h1,
+		section
+			+filter(blur(10px))
+			+transition(0.5s)
+			//+transform(scale(1.05))
+		&:after
+			position: fixed
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 3
+			background-color: rgba(50,50,50,0.6)
+			content: ''
+	.gif-bg
+		position: fixed
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		+bg(bg-video,gif)
+		background-size: cover
+		background-position: center
+		display: none
+
+nav
+	width: 100%
+	position: fixed
+	height: 70px
+	line-height: 70px
+	z-index: 5
+	color: #fff
+	.menu
+		position: absolute
+		line-height: 70px
+		top: 0
+		right: 10px
+		font-size: 1.1rem
+		li
+			display: inline-block
+			padding: 0 10px
+
+header
+	position: relative
+	width: 100%
+	height: 100vh
+	text-align: center
+	overflow: hidden
+	color: #fff
+	video,
+	iframe
+		position: fixed
+		top: 50%
+		left: 50%
+		+transform(translate3D(-50%,-50%,0))
+	iframe
+		width: 100%
+		height: 100%
+	h1
+		font-size: 160px
+		text-indent: 5px
+		font-family: 'Dancing Script', cursive
+		font-style: italic
+		width: 250px
+		height: 250px
+		line-height: 210px
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -125px
+		border: 3px #fff solid
+		box-sizing: border-box
+		+border-radius(50%)
+		+transform(rotate(-13deg))
+
+
+section
+	width: 100%
+	position: relative
+	z-index: 1
+	background: rgba(255,255,255,0.7)
+	h1
+		font-size: 2.2rem
+		line-height: 6rem
+		text-align: center
+		padding-top: 2rem
+	ul
+		text-align: center
+		li
+			width: 30%
+			display: inline-block
+			margin: 15px auto
+			.cover
+				width: 350px
+				margin: auto
+				height: 200px
+				background-color: #ccc
+				background-size: 100%
+				cursor: pointer
+				+transition(0.3s)
+				&:hover
+					box-shadow: 0 0 0 5px #fff inset
+				
+			&[project=c2p]
+				.cover
+					background-image: url(../img/cover-c2p.jpg)
+			&[project=cast-app]
+				.cover
+					background-image: url(../img/cover-cast.jpg)
+			&[project=gungnir]
+				.cover
+					background-image: url(../img/cover-gungnir.jpg)
+			&[project=cht]
+				.cover
+					background-image: url(../img/cover-cht.jpg)
+			&[project=vr]
+				.cover
+					background-image: url(../img/cover-vr.jpg)
+			&[project=hola]
+				.cover
+					background-image: url(../img/cover-hola.jpg)
+			&[project=hoyi]
+				.cover
+					background-image: url(../img/cover-hoyi.jpg)
+			&[project=sonyx]
+				.cover
+					background-image: url(../img/cover-sony.jpg)
+			&[project=other]
+				.cover
+					background-image: url(../img/cover-other.jpg)
+
+			h2
+				font-size: 1.4rem
+				line-height: 2.2rem
+			.tag
+				font-size: .5rem
+				text-transform: uppercase
+				span
+					display: inline-block
+					margin: 0 3px
+					padding: 1px 0
+					color: #999
+					border-bottom: 1px #ff9900 solid
+
+
+	.about
+		width: 60%
+		margin: auto
+		font-size: 1rem
+		line-height: 2rem
+		b
+			font-weight: bold
+			border-bottom: 2px #ff9900 solid
+		h2
+			font-size: 1.5rem
+			line-height: 4rem
+			text-align: center
+			margin-top: 2.5rem
+		.lang
+			display: inline-block
+			width: 47%
+			vertical-align: top
+			&.zh
+				margin-left: 5%
+		hr
+			margin: 1.5rem 0
+			opacity: 0
+		ul
+			&.skillset
+				text-align: center
+				display: inline-block
+				width: 33%
+				vertical-align: top
+				i
+					color: #ff9900
+					font-size: 1.8rem
+				li
+					display: block
+					margin: 0
+					padding: 0
+					width: 100%
+					font-size: 1rem
+					small
+						font-size: .7rem
+	.contact
+		width: 60%
+		margin: auto
+		font-size: 1rem
+		line-height: 2rem
+		text-align: left
+		padding-bottom: 60px
+		.des,
+		.form-cont
+			display: inline-block
+			vertical-align: middle
+		.des
+			width: 35%
+			margin-left: 3%
+			font-size: 1.2rem	
+			.tc
+				padding-top: 15px
+		.form-cont
+			text-align: center
+			width: 60%
+			position: relative
+			li
+				width: 100%
+				display: block
+				margin: 10px 0
+				label
+					font-size: 0
+					height: 0
+					display: none
+				input,
+				textarea
+					text-indent: 10px
+					height: 2rem
+					font-size: 1rem
+					font-family: 'Open Sans', sans-serif
+					border: 1px #ccc solid
+					padding: 5px 0
+					color: #444
+					&:focus
+						border: 1px #ff9900 solid
+						outline: none
+				textarea
+					height: 5rem
+					text-indent: 0
+					padding: 5px 10px
+					width: calc(100% - 20px)
+			h2,
+			span,
+			input,
+			div,
+			textarea
+				display: inline-block
+				vertical-align: middle
+				width: 100%	
+			.form-btn
+				background-color: #ff9900
+				color: #fff
+				border: 0
+				font-size: 1rem
+				letter-spacing: 2.5px
+				line-height: 2.5rem
+			#complete
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				color: #ff8800
+				font-size: 70px
+				line-height: 320px
+				text-align: center
+				z-index: 5
+				opacity: 0
+				+transition(0.2s ease-in)
+				+transform(scale(0))
+			&.show-ok
+				form
+					opacity: .3
+				#complete
+					opacity: 1
+					+transform(scale(1))
+
+.detail
+	position: fixed
+	width: calc(100% - 30px)
+	left: 15px
+	top: 75px
+	height: calc(100% - 90px)
+	background-color: #efefef
+	z-index: 0
+	box-shadow: 0px 1px 20px rgba(100,100,100,0.4), 0px 1px 5px rgba(80,80,80,0.5)
+	opacity: 0
+	+transition(0.2s ease-out)
+	+transform(translateY(30%) scale(1))
+	&.show
+		z-index: 100
+		opacity: 1
+		+transform(translateY(0) scale(1))
+	.scroll
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		iframe
+			position: relative
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+	
+	.close
+		font-size: 2rem
+		position: absolute
+		top: 15px
+		right: 20px
+		width: 25px
+		height: 25px
+		text-align: center
+		cursor: pointer
+		&:before,
+		&:after
+			content: ''
+			width: 2px
+			font-size: 0
+			height: 30px
+			position: absolute
+			background-color: #888
+			cursor: pointer
+		&:before
+			+transform(rotate(-45deg))
+		&:after
+			+transform(rotate(45deg))
+
+
+.project
+	.inner
+		width: 60%
+		margin: 30px auto
+		position: relative
+		text-align: center
+
+		h1
+			font-size: 2.2rem
+			line-height: 3rem
+			padding: 5rem 0 1rem
+		h2
+			font-size: 1.3rem
+			line-height: 2.5rem
+			margin-top: 50px
+		h3
+			font-size: 1.3rem
+			line-height: 2.2rem
+			margin-bottom: 30px
+			font-weight: thin
+		.pic
+			width: 100%
+			//min-height: 500px
+			text-align: center
+			margin: 15px auto
+			img
+				max-width: 100%
+				display: block
+				margin: auto	
+		p
+			font-size: 1rem
+			line-height: 1.9rem
+		a
+			text-decoration: none
+			&:hover	
+				&:before,
+				&:after
+					opacity: 1
+			&:before,
+			&:after
+				position: absolute
+				opacity: 0
+				+transition(0.3s)
+			&:before
+				content: ''			
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(245,245,245,.4)
+				z-index: 1
+			&:after
+				top: 50%
+				left: 50%
+				margin: -20px
+				width: 40px
+				height: 40px
+				border: 3px #666 solid
+				+border-radius(50%)
+				color: #666
+				text-align: center
+				font-size: 22px
+				line-height: 40px
+				z-index: 2
+				font-family: 'FontAwesome'
+				content: '\f0c1'
+
+		.browser-mockup
+			border-top: 2em solid rgba(200, 200, 200, 0.7)
+			box-shadow: 0 0 1px 0 rgba(50, 50, 50, 0.4)
+			position: relative
+			border-radius: 3px 3px 0 0
+			margin: 15px auto
+			&:before
+				display: block
+				position: absolute
+				content: ''
+				top: -1.25em
+				left: 1em
+				width: 0.5em
+				height: 0.5em
+				border-radius: 50%
+				background-color: #f44
+				box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5
+
+			&.with-url
+				&:after
+					display: block
+					position: absolute
+					content: ''
+					top: -1.6em
+					left: 5.5em
+					width: calc(100% - 6em)
+					height: 1.2em
+					border-radius: 2px
+					background-color: white
+				&.iframe
+					width: 700px
+					height: 394px
+					.cont
+						width: 700px
+						height: 394px
+						display: block
+						overflow: hidden
+						iframe
+							width: 1280px
+							height: 720px
+							+transform(scale(0.55) translateX(-41%) translateY(-41%))
+
+			img
+				display: block
+				width: 100%
+		.mobile-mockup
+			width: 184px
+			border-top: solid 40px #ddd
+			border-left: solid 12px #ddd
+			border-right: solid 12px #ddd
+			border-bottom: solid 40px #ddd
+			border-radius: 15px
+			position: relative
+			margin: 0 auto
+			text-align: center
+			&:before,
+			&:after
+				position: absolute	
+				content: ''
+				background-color: #bbb
+			&:before
+				top: -21px
+				width: 30px
+				height: 6px
+				box-shadow: 0 0 0 0 #bbb
+				margin-left: -15px
+				+border-radius(3px)
+			&:after
+				bottom: -34px
+				margin-left: -15px
+				width: 28px
+				height: 28px
+				+border-radius(50%)			
+			img
+				display: block
+				width: 100%
+			&.iframe
+				width: 375px
+				height: 667px
+				border-top: solid 80px #ddd
+				border-left: solid 18px #ddd
+				border-right: solid 18px #ddd
+				border-bottom: solid 80px #ddd
+				border-radius: 40px
+				&:before
+					top: -41px
+					width: 70px
+					height: 8px
+					box-shadow: 0 0 0 0 #bbb
+					margin-left: -35px
+					+border-radius(4px)
+				&:after
+					bottom: -65px
+					margin-left: -25px
+					width: 50px
+					height: 50px
+				.cont
+					width: 375px
+					height: 667px
+					display: block
+					overflow: hidden
+					iframe
+						width: 375px
+						height: 667px
+						//+transform(scale(0.61) translateX(-33%) translateY(-20%))
+		.combine
+			position: relative
+			width: 100%
+			text-align: left
+			padding-bottom: 10px
+			margin: 30px 0 40px
+			.put-back
+				width: 85%
+				margin-left: 0
+			.put-front
+				position: absolute
+				width: 18%
+				bottom: 0
+				right: 0
+			.mobile-mockup
+				border-top: solid 30px #ddd
+				border-left: solid 8px #ddd
+				border-right: solid 8px #ddd
+				border-bottom: solid 30px #ddd
+				border-radius: 10px
+				&:before
+					top: -16px
+					width: 28px
+					height: 4px
+					margin-left: -14px
+					+border-radius(2px)
+				&:after
+					bottom: -25px
+					margin-left: -11px
+					width: 20px
+					height: 20px
+					+border-radius(50%)
+
