@@ -287,6 +287,12 @@ section ul li .cover:hover {
     height: 200px;
   }
 }
+@media screen and (max-width: 320px) {
+  section ul li .cover {
+    width: 256px;
+    height: 146px;
+  }
+}
 section ul li[project=c2p] .cover {
   background-image: url(../img/cover-c2p.jpg);
 }
@@ -399,8 +405,10 @@ section .contact {
   text-align: left;
   padding-bottom: 60px;
 }
-section .contact ㄒ {
-  width: 80%;
+@media screen and (max-width: 414px) {
+  section .contact {
+    width: 80%;
+  }
 }
 section .contact .des,
 section .contact .form-cont {
