@@ -57,6 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 ::selection {
   background: #ff9900;
+  color: #fff;
 }
 
 body {
