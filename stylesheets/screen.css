@@ -384,7 +384,11 @@ section .about h2 a {
 }
 section .about h2 a:hover:after {
   font-family: "FontAwesome";
-  content: "";
+  content: "";
+  font-size: 1rem;
+  color: #666;
+  position: absolute;
+  margin-left: 3px;
 }
 section .about .lang {
   display: inline-block;
