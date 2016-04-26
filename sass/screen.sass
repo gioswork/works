@@ -408,6 +408,8 @@ section
 		margin: 30px auto
 		position: relative
 		text-align: center
+		@media screen and (max-width: 414px)
+			width: 90%
 
 		h1
 			font-size: 2.2rem
@@ -573,7 +575,8 @@ section
 					iframe
 						width: 375px
 						height: 667px
-						//+transform(scale(0.61) translateX(-33%) translateY(-20%))
+				@media screen and (max-width: 414px)
+					+transform(translateX(-5%) scale(0.7))
 		.combine
 			position: relative
 			width: 100%
