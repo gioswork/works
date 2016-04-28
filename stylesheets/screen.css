@@ -230,22 +230,30 @@ header h1 {
   text-indent: 5px;
   font-family: "Dancing Script", cursive;
   font-style: italic;
-  width: 250px;
-  height: 250px;
-  line-height: 210px;
+  width: 300px;
+  height: 300px;
+  line-height: 265px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -125px;
+  margin: -150px;
+  -moz-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  -webkit-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+}
+header h1:after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 25px;
+  left: 25px;
   border: 3px #fff solid;
   box-sizing: border-box;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  -moz-transform: rotate(-13deg);
-  -ms-transform: rotate(-13deg);
-  -webkit-transform: rotate(-13deg);
-  transform: rotate(-13deg);
 }
 header.mobile-gif {
   background: url(../img/bg-video.gif) center no-repeat;
