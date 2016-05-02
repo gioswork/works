@@ -41,13 +41,13 @@ $('.works li').click(function(){
 	var name = $(this).attr('project');
 	$('.detail').addClass('show');
 	$('.detail iframe').attr('src','projects/' + name + '.html');
-	$('body').addClass('blur');
+	//$('body').addClass('blur');
 });
 
 $('.detail .close').click(function(){
 	$('.detail').removeClass('show');
 	$('.detail iframe').attr('src','');
-  $('body').removeClass('blur');
+  //$('body').removeClass('blur');
 })
 
 
